@@ -17,18 +17,18 @@ $(document).ready(function () {
 
   $(".symbol").click(function() {
     if ($(this).text().trim().indexOf("C") !== -1) {
-      var farenheit = ctof(float($(".degrees p").text().trim()));
-      setText(farenheit, "&deg;F");
+      var farenheit = ctof(parseFloat($(".degrees p").text().trim()));
+      setText(farenheit.toFixed(1), "&degF");
     }
     else {
-      var celsius = ftoc(float($(".degrees p").text().trim()));
-      setText(celsius, "&degC");
+      var celsius = ftoc(parseFloat($(".degrees p").text().trim()));
+      setText(celsius.toFixed(1), "&degC");
     }
   });
 
   function setText(degrees, symbol) {
     $(".degrees").html("<p>" + degrees +"</p>");
-    $(".symbol").text(symbol);
+    $(".symbol").html(symbol);
   }
 
   function ctof(cel) {
