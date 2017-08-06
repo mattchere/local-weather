@@ -71,3 +71,20 @@ body {
   font-size: 50px;
   margin: 50px 0;
 }
+.weather {
+	font-size: 30px;
+	padding: 10px;
+	height: 1em;
+}
+.degrees {
+	width: 2em;
+	display: inline-block;
+}
+.symbol {
+	display: none;
+	font-size: 25px;
+}
+a:hover {
+	cursor: pointer;
+	color: grey;
+}
